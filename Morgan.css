@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&family=Oswald:wght@400;600&display=swap');
+/* ============================================================
+   ***  CONTROL PANEL  ***   EDIT EVERYTHING HERE.
+   Text goes between the "quotes". Images go inside url("...").
+   (Audio file + the link buttons live in the pasted snippet.)
+   Use \A for a line break inside a text value.
+   ============================================================ */
+:root{
+  /* ---- IMAGES ---- */
+  --img-bg:       url("https://file.garden/aGfo9JTdVktTM-Ys/Morgan/BG.png");
+  --img-photo:    url("https://file.garden/aGfo9JTdVktTM-Ys/Morgan/PFPAlt.png");   /* dossier photo plate */
+  --bg-opacity:   0.18;   /* background visibility: 0 = off, 1 = full */
+
+  --img-e1:       url("https://file.garden/aGfo9JTdVktTM-Ys/Morgan/1C.png");
+  --img-e2:       url("https://file.garden/aGfo9JTdVktTM-Ys/Morgan/2.png");
+  --img-e3:       url("https://file.garden/aGfo9JTdVktTM-Ys/Morgan/3.png");
+  --img-e4:       url("https://file.garden/aGfo9JTdVktTM-Ys/Morgan/4.png");
+  --img-e5:       url("https://file.garden/aGfo9JTdVktTM-Ys/Morgan/5.png");
+  --img-e6:       url("https://file.garden/aGfo9JTdVktTM-Ys/Morgan/6A.png");
+
+  /* aspect per log image — 3/4 = vertical, 16/10 = landscape */
+  --ar-e1: 3/4;
+  --ar-e2: 16/10;
+  --ar-e3: 3/4;
+  --ar-e4: 3/4;
+  --ar-e5: 3/4;
+  --ar-e6: 3/4;
+
+  /* ---- HEADER ---- */
+  --t-agency:   "Backcountry Ranger Division \00b7 Personnel File";
+  --t-fileno:   "FILE NO. AC-4471-R";
+  --t-stamp:    "Active Duty";
+  --t-surname:  "ASHCROFT";
+  --t-given:    "Morgan";
+  --t-role:     "Country Ranger";
+  --t-photocap: "SUBJECT \00b7 ASHCROFT, M.";
+
+  /* ---- SUMMARY (top blurb) ---- */
+  --t-summary: "Her biological clock's ticking and she's looking to settle down. But her past keeps haunting her, this town has its claws stuck into her deep, and she don't got many friends to call her own.\A\ABe the flame that heals, or just another name.";
+
+  /* ---- VITALS TABLE ---- */
+  --t-v1l: "Age";              --t-v1v: "34";
+  --t-v2l: "Height";           --t-v2v: "6' 0\"";
+  --t-v3l: "Species";          --t-v3v: "Anthro Panther";
+  --t-v4l: "Eyes";             --t-v4v: "Green";
+  --t-v5l: "Ident. Marks";     --t-v5v: "Scar, left brow";
+  --t-v6l: "Current Post";     --t-v6v: "Backcountry patrol \2014 sole badge";
+  --t-v7l: "Disposition";      --t-v7v: "Blunt \00b7 pragmatic \00b7 solitary";
+  --t-v8l: "Next of Kin";      --t-v8v: "declined to state";
+
+  /* ---- SERVICE RECORD (3 tours) ---- */
+  --t-s1y: "6 YRS";  --t-s1t: "U.S. Army \2014 Fire Support";      --t-s1d: "Fire direction control. Coordinates, radio traffic, gun data. One of the best on the board.";
+  --t-s2y: "4 YRS";  --t-s2t: "Private Contractor \2014 Convoy";   --t-s2d: "Convoy security. Same roads, same hours, predictable as a bus route.";
+  --t-s3y: "NOW";    --t-s3t: "Country Ranger";                    --t-s3d: "Hundreds of square miles of backcountry. Nobody to answer to, and nearly nobody to talk to.";
+
+  /* ---- QUALIFICATIONS (chips) ---- */
+  --t-q1: "Tang Soo Do \2014 Black Belt";
+  --t-q2: "Taekwondo";
+  --t-q3: "Karate";
+  --t-q4: "Brazilian Jiu-Jitsu";
+  --t-q5: "Fire Direction Control";
+  --t-q6: "Gunsmithing";
+  --t-q7: "Marksmanship";
+
+  /* ---- ASSESSMENT ---- */
+  --t-assess: "Subject performs best alone and knows it. Work ethic is not in question; her willingness to be helped is. Keeps her tags. Keeps her distance.\A\ASays the job is about the land and the animals. That's half true. The other half is that out here, the only person she can fail is herself.";
+
+  /* ---- FLAGS (redacted lines — hover to read) ---- */
+  --t-f1: "Will not sit facing an open flame. Do not ask.";
+  --t-f2: "Family is not a subject. Neither is her brother.";
+  --t-f3: "Declines group arrangements. One or none.";
+
+  /* ---- KNOWN ASSOCIATES ---- */
+  --t-a1n: "Angelika";          --t-a1r: "Gym Owner";        --t-a1d: "Loud, exhausting, and the only person alive who can make her laugh out loud.";
+  --t-a2n: "Brandy";            --t-a2r: "Tit for Tat";      --t-a2d: "Knows her way around a shotgun better than most men Morgan served with. Sunday lawn chairs, whiskey, paper plates.";
+  --t-a3n: "Sydney Whittaker";  --t-a3r: "Frenchiest Fri";   --t-a3d: "Assistant manager at a restaurant she frequents. Morgan comes around to see her. Some things stay unsaid.";
+
+  /* ---- AUDIO ---- */
+  --t-audio: "Ranger Got Ya Name";
+
+  /* ---- ENCOUNTER LOGS (6 greetings) ---- */
+  --t-e1t: "Tit for Tat and the Black Panther";  --t-e1s: "Your first meeting, and it's in a strip club.";
+  --t-e2t: "A Woman That can Rip you Apart";     --t-e2s: "Wandering in the forest, you spot her cabin and the panther.";
+  --t-e3t: "The Ranger with the Big Iron on her Hip"; --t-e3s: "You've never seen a gun quite like hers before.";
+  --t-e4t: "Hard Work and the Blessed Sweat";    --t-e4s: "She joins you during your hike, using it as a chance to work out.";
+  --t-e5t: "Date Night with the French";         --t-e5s: "She's late and drenched for her date at a fast food restaurant.";
+  --t-e6t: "A Cougar in Panther Clothing";       --t-e6s: "You're her Yiffr date, meeting her at her place with one thing in mind.";
+
+  /* ---- HANDLER'S NOTES + FOOTER ---- */
+  --t-notes: "This is another commission bot of mine — I really liked how this came out. Hit close to home. I set this one up to work with a lot of my other bots, so you may recognize some faces in it from my other works!\A\AI've improved my workflow in imaging significantly, as well as understanding Lorebooks better. The better I get, the better bots you get. If you like my stuff I suggest donating, or maybe commissioning me too! It's the best way to make me release more often. Either way, I hope you enjoy! \2665";
+  --t-foot:  "End of file \00b7 Ashcroft, M. \00b7 AC-4471-R";
+}
+
+:root{
+  --mg-void:#14150f; --mg-olive:#3d4634; --mg-olive2:#262d1e; --mg-paper:#d9caa5; --mg-paper2:#c8b68e;
+  --mg-ink:#23200f; --mg-ink2:#4a4433; --mg-stamp:#9c2b22; --mg-amber:#c98a2b; --mg-line:rgba(35,32,15,.22);
+  --mg-grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- shell ---------- */
+.mg{position:relative;max-width:860px;margin:0 auto;padding:0 0 6px;color:var(--mg-ink);font-family:'Courier Prime',monospace;line-height:1.6}
+.mg *{box-sizing:border-box}
+.mg-sheet{position:relative;background:linear-gradient(178deg,var(--mg-paper),var(--mg-paper2));border:1px solid rgba(0,0,0,.45);box-shadow:0 26px 60px rgba(0,0,0,.6);padding:0 0 34px}
+.mg-sheet::before{content:"";position:absolute;inset:0;pointer-events:none;background:var(--mg-grain);opacity:.13;mix-blend-mode:multiply}
+.mg-sheet::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(70% 55% at 80% 8%,rgba(120,90,30,.10),transparent 60%),radial-gradient(50% 40% at 5% 95%,rgba(90,70,20,.10),transparent 60%)}
+.mg-in{position:relative;z-index:2;padding:0 30px}
+
+/* ---------- top bar ---------- */
+.mg-bar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:var(--mg-olive2);color:#cfd3c0;padding:9px 30px;font-family:'Courier Prime',monospace;font-size:10.5px;letter-spacing:2px;text-transform:uppercase;border-bottom:3px solid var(--mg-olive)}
+.mg-bar .ag::after{content:var(--t-agency)}
+.mg-bar .fn{margin-left:auto;color:var(--mg-amber)}
+.mg-bar .fn::after{content:var(--t-fileno)}
+
+/* ---------- header ---------- */
+.mg-head{display:flex;gap:24px;align-items:flex-start;padding-top:26px}
+.mg-htext{flex:1;min-width:0}
+.mg-kick{font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--mg-ink2)}
+.mg-kick::after{content:"Personnel Dossier \2014 Restricted"}
+.mg-name{font-family:'Black Ops One',cursive;font-size:52px;line-height:.95;letter-spacing:1px;color:var(--mg-ink);margin:6px 0 0;text-transform:uppercase}
+.mg-name::after{content:var(--t-surname)}
+.mg-given{font-family:'Special Elite',monospace;font-size:22px;color:var(--mg-ink2);margin-top:2px}
+.mg-given::after{content:var(--t-given)}
+.mg-role{display:inline-block;margin-top:12px;background:var(--mg-olive2);color:#d3d7c4;font-family:'Oswald',sans-serif;font-weight:600;font-size:11px;letter-spacing:3px;text-transform:uppercase;padding:4px 12px}
+.mg-role::after{content:var(--t-role)}
+.mg-stamp{position:absolute;top:74px;right:26px;z-index:4;font-family:'Black Ops One',cursive;font-size:15px;letter-spacing:2px;text-transform:uppercase;color:var(--mg-stamp);border:3px double var(--mg-stamp);padding:5px 12px;transform:rotate(-11deg);opacity:.62}
+.mg-stamp::after{content:var(--t-stamp)}
+
+/* photo plate */
+.mg-plate{flex:none;width:210px}
+.mg-photo{position:relative;width:100%;aspect-ratio:3/4;background:var(--img-photo) center/cover;filter:grayscale(.55) contrast(1.12) sepia(.18);border:1px solid rgba(0,0,0,.5)}
+.mg-photo::before,.mg-photo::after{content:"";position:absolute;width:14px;height:14px;border:2px solid var(--mg-ink)}
+.mg-photo::before{top:-1px;left:-1px;border-right:none;border-bottom:none}
+.mg-photo::after{bottom:-1px;right:-1px;border-left:none;border-top:none}
+.mg-photocap{margin-top:7px;font-family:'Courier Prime',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mg-ink2);text-align:center}
+.mg-photocap::after{content:var(--t-photocap)}
+
+/* ---------- section label ---------- */
+.mg-sec{display:flex;align-items:center;gap:12px;margin:30px 0 14px;font-family:'Oswald',sans-serif;font-weight:600;font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--mg-ink)}
+.mg-sec::before{content:"";width:16px;height:3px;background:var(--mg-stamp);flex:none}
+.mg-sec::after{content:"";flex:1;height:1px;background:var(--mg-line)}
+.mg-sec.s1::first-line{}
+
+/* ---------- summary ---------- */
+.mg-sum{white-space:pre-line;font-family:'Special Elite',monospace;font-size:15px;line-height:1.75;color:var(--mg-ink)}
+.mg-sum::after{content:var(--t-summary)}
+
+/* ---------- vitals table ---------- */
+.mg-vit{width:100%;border-collapse:collapse;border:1px solid var(--mg-line)}
+.mg-vit tr{border-bottom:1px solid var(--mg-line)}
+.mg-vit tr:last-child{border-bottom:none}
+.mg-vl{width:34%;padding:8px 12px;background:rgba(61,70,52,.10);font-family:'Courier Prime',monospace;font-weight:700;font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mg-ink2);vertical-align:top}
+.mg-vv{padding:8px 12px;font-family:'Courier Prime',monospace;font-size:13px;color:var(--mg-ink)}
+.mg-vit .v1 .mg-vl::after{content:var(--t-v1l)} .mg-vit .v1 .mg-vv::after{content:var(--t-v1v)}
+.mg-vit .v2 .mg-vl::after{content:var(--t-v2l)} .mg-vit .v2 .mg-vv::after{content:var(--t-v2v)}
+.mg-vit .v3 .mg-vl::after{content:var(--t-v3l)} .mg-vit .v3 .mg-vv::after{content:var(--t-v3v)}
+.mg-vit .v4 .mg-vl::after{content:var(--t-v4l)} .mg-vit .v4 .mg-vv::after{content:var(--t-v4v)}
+.mg-vit .v5 .mg-vl::after{content:var(--t-v5l)} .mg-vit .v5 .mg-vv::after{content:var(--t-v5v)}
+.mg-vit .v6 .mg-vl::after{content:var(--t-v6l)} .mg-vit .v6 .mg-vv::after{content:var(--t-v6v)}
+.mg-vit .v7 .mg-vl::after{content:var(--t-v7l)} .mg-vit .v7 .mg-vv::after{content:var(--t-v7v)}
+.mg-vit .v8 .mg-vl::after{content:var(--t-v8l)} .mg-vit .v8 .mg-vv::after{content:var(--t-v8v)}
+
+/* ---------- service record ---------- */
+.mg-tours{display:flex;flex-direction:column;gap:0;border-left:3px solid var(--mg-olive)}
+.mg-tour{position:relative;display:flex;gap:16px;align-items:flex-start;padding:13px 0 13px 20px}
+.mg-tour + .mg-tour{border-top:1px dashed var(--mg-line)}
+.mg-tour::before{content:"";position:absolute;left:-8px;top:20px;width:12px;height:12px;background:var(--mg-paper);border:3px solid var(--mg-olive);border-radius:50%}
+.mg-ty{flex:none;width:66px;font-family:'Black Ops One',cursive;font-size:14px;letter-spacing:1px;color:var(--mg-stamp)}
+.mg-tb{flex:1;min-width:0}
+.mg-tt{font-family:'Oswald',sans-serif;font-weight:600;font-size:15px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mg-ink)}
+.mg-td{font-family:'Courier Prime',monospace;font-size:12.5px;color:var(--mg-ink2);margin-top:3px}
+.mg-tour.t1 .mg-ty::after{content:var(--t-s1y)} .mg-tour.t1 .mg-tt::after{content:var(--t-s1t)} .mg-tour.t1 .mg-td::after{content:var(--t-s1d)}
+.mg-tour.t2 .mg-ty::after{content:var(--t-s2y)} .mg-tour.t2 .mg-tt::after{content:var(--t-s2t)} .mg-tour.t2 .mg-td::after{content:var(--t-s2d)}
+.mg-tour.t3 .mg-ty::after{content:var(--t-s3y)} .mg-tour.t3 .mg-tt::after{content:var(--t-s3t)} .mg-tour.t3 .mg-td::after{content:var(--t-s3d)}
+.mg-tour.t3 .mg-ty{color:var(--mg-olive)}
+
+/* ---------- qualifications ---------- */
+.mg-quals{display:flex;flex-wrap:wrap;gap:8px}
+.mg-q{font-family:'Courier Prime',monospace;font-size:10.5px;letter-spacing:1.2px;text-transform:uppercase;padding:5px 10px;border:1px solid var(--mg-ink2);color:var(--mg-ink);background:rgba(61,70,52,.07)}
+.mg-q.q1::after{content:var(--t-q1)} .mg-q.q2::after{content:var(--t-q2)} .mg-q.q3::after{content:var(--t-q3)}
+.mg-q.q4::after{content:var(--t-q4)} .mg-q.q5::after{content:var(--t-q5)} .mg-q.q6::after{content:var(--t-q6)}
+.mg-q.q7::after{content:var(--t-q7)}
+.mg-q.q1{border-color:var(--mg-stamp);color:var(--mg-stamp)}
+
+/* ---------- assessment ---------- */
+.mg-assess{border:1px solid var(--mg-line);border-left:4px solid var(--mg-olive);background:rgba(255,255,255,.14);padding:16px 18px;white-space:pre-line;font-family:'Special Elite',monospace;font-size:13.5px;line-height:1.75;color:var(--mg-ink)}
+.mg-assess::after{content:var(--t-assess)}
+
+/* ---------- flags (redacted) ---------- */
+.mg-flags{display:flex;flex-direction:column;gap:9px}
+.mg-flag{display:flex;gap:11px;align-items:flex-start;font-family:'Courier Prime',monospace;font-size:12.5px}
+.mg-flag .x{flex:none;color:var(--mg-stamp);font-weight:700}
+.mg-flag .x::after{content:"\2715"}
+.mg-red{background:var(--mg-ink);color:transparent;padding:1px 5px;cursor:help;transition:background .25s ease,color .25s ease}
+.mg-red:hover{background:transparent;color:var(--mg-ink)}
+.mg-flag.f1 .mg-red::after{content:var(--t-f1)}
+.mg-flag.f2 .mg-red::after{content:var(--t-f2)}
+.mg-flag.f3 .mg-red::after{content:var(--t-f3)}
+.mg-flagnote{margin-top:10px;font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mg-ink2);opacity:.8}
+.mg-flagnote::after{content:"\2190 hover to declassify"}
+
+/* ---------- associates ---------- */
+.mg-assoc{display:flex;gap:12px;flex-wrap:wrap}
+.mg-ac{flex:1 1 210px;border:1px solid var(--mg-line);background:rgba(255,255,255,.13);padding:13px 14px;transition:border-color .25s ease,transform .25s ease}
+.mg-ac:hover{border-color:var(--mg-olive);transform:translateY(-2px)}
+.mg-acn{font-family:'Oswald',sans-serif;font-weight:600;font-size:14px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mg-ink)}
+.mg-acr{font-family:'Courier Prime',monospace;font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mg-stamp);margin-top:1px}
+.mg-acd{font-family:'Courier Prime',monospace;font-size:12px;color:var(--mg-ink2);margin-top:7px;line-height:1.55}
+.mg-ac.a1 .mg-acn::after{content:var(--t-a1n)} .mg-ac.a1 .mg-acr::after{content:var(--t-a1r)} .mg-ac.a1 .mg-acd::after{content:var(--t-a1d)}
+.mg-ac.a2 .mg-acn::after{content:var(--t-a2n)} .mg-ac.a2 .mg-acr::after{content:var(--t-a2r)} .mg-ac.a2 .mg-acd::after{content:var(--t-a2d)}
+.mg-ac.a3 .mg-acn::after{content:var(--t-a3n)} .mg-ac.a3 .mg-acr::after{content:var(--t-a3r)} .mg-ac.a3 .mg-acd::after{content:var(--t-a3d)}
+a.mg-ac{text-decoration:none;display:block}
+a.mg-ac::after{content:"view file \2197";display:block;margin-top:9px;font-family:'Courier Prime',monospace;font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mg-olive)}
+
+/* ---------- audio ---------- */
+.mg-audio{display:flex;align-items:center;gap:14px;flex-wrap:wrap;border:1px solid var(--mg-line);background:var(--mg-olive2);padding:11px 15px}
+.mg-alab{font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#a8ad96;flex:none}
+.mg-alab::after{content:"Audio Log \2014 "}
+.mg-alab b{color:var(--mg-amber);font-weight:400}
+.mg-alab b::after{content:var(--t-audio)}
+.mg-reel{flex:none;width:16px;height:16px;border:2px solid var(--mg-amber);border-top-color:transparent;border-radius:50%;animation:mg-spin 1.3s linear infinite}
+@keyframes mg-spin{to{transform:rotate(360deg)}}
+.mg-audio audio{flex:1;min-width:190px;height:30px;filter:grayscale(1) invert(.88) contrast(.9)}
+
+/* ---------- encounter logs ---------- */
+.mg-logs{display:flex;flex-wrap:wrap;gap:16px}
+.mg-log{flex:1 1 240px;max-width:calc(50% - 8px);border:1px solid rgba(0,0,0,.4);background:rgba(255,255,255,.15);padding:11px;transition:transform .25s ease,box-shadow .25s ease}
+.mg-log:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(0,0,0,.35)}
+.mg-limg{position:relative;width:100%;aspect-ratio:var(--ar,3/4);background-size:cover;background-position:center 12%;filter:grayscale(.35) contrast(1.08) sepia(.12);border:1px solid rgba(0,0,0,.45);transition:filter .35s ease}
+.mg-log:hover .mg-limg{filter:grayscale(0) contrast(1.02) sepia(0)}
+.mg-lno{position:absolute;top:0;left:0;background:var(--mg-olive2);color:#d2d6c3;font-family:'Black Ops One',cursive;font-size:12px;letter-spacing:1px;padding:3px 9px}
+.mg-lbody{padding:10px 2px 2px}
+.mg-lt{font-family:'Oswald',sans-serif;font-weight:600;font-size:14.5px;line-height:1.25;letter-spacing:.8px;text-transform:uppercase;color:var(--mg-ink)}
+.mg-ls{font-family:'Courier Prime',monospace;font-size:12px;color:var(--mg-ink2);margin-top:5px;line-height:1.5}
+.mg-ltags{display:flex;gap:5px;flex-wrap:wrap;margin-top:9px}
+.mg-tag{font-family:'Courier Prime',monospace;font-size:8.5px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;padding:2px 7px;border:1px solid var(--mg-ink2);color:var(--mg-ink2)}
+.mg-tag.nsfw{border-color:var(--mg-stamp);color:var(--mg-stamp)}
+.mg-tag.sfw{border-color:#3f6b3a;color:#3f6b3a}
+.mg-tag.secret{border-color:#2f6285;color:#2f6285}
+.mg-log.e1 .mg-limg{background-image:var(--img-e1);--ar:var(--ar-e1)} .mg-log.e1 .mg-lno::after{content:"01"} .mg-log.e1 .mg-lt::after{content:var(--t-e1t)} .mg-log.e1 .mg-ls::after{content:var(--t-e1s)}
+.mg-log.e2 .mg-limg{background-image:var(--img-e2);--ar:var(--ar-e2)} .mg-log.e2 .mg-lno::after{content:"02"} .mg-log.e2 .mg-lt::after{content:var(--t-e2t)} .mg-log.e2 .mg-ls::after{content:var(--t-e2s)}
+.mg-log.e3 .mg-limg{background-image:var(--img-e3);--ar:var(--ar-e3)} .mg-log.e3 .mg-lno::after{content:"03"} .mg-log.e3 .mg-lt::after{content:var(--t-e3t)} .mg-log.e3 .mg-ls::after{content:var(--t-e3s)}
+.mg-log.e4 .mg-limg{background-image:var(--img-e4);--ar:var(--ar-e4)} .mg-log.e4 .mg-lno::after{content:"04"} .mg-log.e4 .mg-lt::after{content:var(--t-e4t)} .mg-log.e4 .mg-ls::after{content:var(--t-e4s)}
+.mg-log.e5 .mg-limg{background-image:var(--img-e5);--ar:var(--ar-e5)} .mg-log.e5 .mg-lno::after{content:"05"} .mg-log.e5 .mg-lt::after{content:var(--t-e5t)} .mg-log.e5 .mg-ls::after{content:var(--t-e5s)}
+.mg-log.e6 .mg-limg{background-image:var(--img-e6);--ar:var(--ar-e6)} .mg-log.e6 .mg-lno::after{content:"06"} .mg-log.e6 .mg-lt::after{content:var(--t-e6t)} .mg-log.e6 .mg-ls::after{content:var(--t-e6s)}
+
+/* ---------- handler's notes ---------- */
+.mg-notes{border:1px solid var(--mg-line);border-top:4px solid var(--mg-stamp);background:rgba(255,255,255,.14);padding:16px 18px;white-space:pre-line;font-family:'Special Elite',monospace;font-size:13.5px;line-height:1.78;color:var(--mg-ink)}
+.mg-notes::after{content:var(--t-notes)}
+
+/* ---------- links ---------- */
+.mg-links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+.mg-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;font-family:'Oswald',sans-serif;font-weight:600;font-size:11.5px;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;border:1px solid var(--mg-ink);color:var(--mg-ink)!important;background:transparent;transition:background .2s ease,color .2s ease,transform .15s ease}
+.mg-btn:hover{transform:translateY(-2px)}
+.mg-btn-kofi{background:var(--mg-stamp);border-color:var(--mg-stamp);color:#f2e7d2!important}
+.mg-btn-kofi:hover{background:#b23227}
+.mg-btn-disc{background:var(--mg-olive2);border-color:var(--mg-olive2);color:#dfe3d1!important}
+.mg-btn-disc:hover{background:#333c28}
+.mg-btn-web:hover{background:var(--mg-ink);color:var(--mg-paper)!important}
+
+.mg-foot{margin-top:22px;text-align:center;font-family:'Courier Prime',monospace;font-size:9.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--mg-ink2);opacity:.75}
+.mg-foot::after{content:var(--t-foot)}
+
+@media(max-width:720px){
+  .mg-in{padding:0 16px}
+  .mg-bar{padding:9px 16px}
+  .mg-head{flex-direction:column}
+  .mg-plate{width:100%}
+  .mg-name{font-size:38px}
+  .mg-stamp{top:auto;bottom:16px;right:12px}
+  .mg-log{max-width:100%;flex:1 1 100%}
+  .mg-vl{width:42%}
+}
+
+/* ============================================================
+   PAGE SKIN — restyles Chub's own chrome to match the dossier.
+   ============================================================ */
+body,#root,main{background:#0e0f0a!important}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:var(--img-bg) center/cover no-repeat fixed;opacity:var(--bg-opacity);filter:grayscale(.45) contrast(1.05) brightness(.55)}
+.ant-col.ant-col-lg-6,.ant-col.ant-col-lg-18{flex:0 0 100%!important;max-width:860px!important;margin:0 auto!important}
+.mt-2 > div:has(> .msg-mkdn-container){max-height:none!important;overflow:visible!important}
+.mt-2 > div:has(> .msg-mkdn-container) + .mb-3{display:none!important}
+div.ant-row:has(> h3.ant-typography){display:none!important}
+.mt-2 > .msg-mkdn-container{display:none!important}
+.ant-col-lg-6 .ant-btn{border-radius:0!important;font-family:'Oswald',sans-serif!important;font-weight:600!important;font-size:11px!important;letter-spacing:2px!important;text-transform:uppercase!important;border:1px solid #6a7359!important;background:#262d1e!important;color:#dfe3d1!important}
+.ant-col-lg-6 .ant-btn-primary{background:#9c2b22!important;border-color:#9c2b22!important;color:#f2e7d2!important}
+.ant-tag{background:rgba(217,202,165,.10)!important;border:1px solid #6a7359!important;color:#cfd3c0!important;border-radius:0!important;font-family:'Courier Prime',monospace!important;text-transform:uppercase!important;letter-spacing:1px!important;padding:1px 8px!important}
+.ant-tag.ant-tag-error{border-color:#9c2b22!important;color:#e08f86!important}
+.mt-2 a[href*="/users/"]{display:inline-flex!important;align-items:center!important;color:var(--mg-amber)!important;font-family:'Courier Prime',monospace!important;letter-spacing:1px!important}
+.mt-2 a[href*="/users/"]::before{content:""!important;display:inline-block!important;width:18px!important;height:18px!important;margin-right:8px!important;background:url('https://file.garden/aGfo9JTdVktTM-Ys/Senfuir%20Logo.png') center/cover no-repeat!important;border:1px solid #6a7359!important}
+.mt-4.text-right .ant-btn{border-radius:0!important;border:1px solid #6a7359!important;background:#262d1e!important;color:#dfe3d1!important;font-family:'Oswald',sans-serif!important;font-weight:600!important;text-transform:uppercase!important;letter-spacing:1.5px!important}
