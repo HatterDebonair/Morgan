@@ -18,13 +18,22 @@
   --img-e5:       url("https://file.garden/aGfo9JTdVktTM-Ys/Morgan/5.png");
   --img-e6:       url("https://file.garden/aGfo9JTdVktTM-Ys/Morgan/6A.png");
 
-  /* aspect per log image — 3/4 = vertical, 16/10 = landscape */
-  --ar-e1: 3/4;
+  /* aspect per log image — 16/10 = landscape plate, 3/4 = tall plate */
+  --ar-e1: 16/10;
   --ar-e2: 16/10;
-  --ar-e3: 3/4;
-  --ar-e4: 3/4;
-  --ar-e5: 3/4;
-  --ar-e6: 3/4;
+  --ar-e3: 16/10;
+  --ar-e4: 16/10;
+  --ar-e5: 16/10;
+  --ar-e6: 16/10;
+
+  /* framing per log image — "50% 12%" = horizontal% vertical%.
+     Lower 2nd number = show more TOP. Lower 1st number = show more LEFT. */
+  --pos-e1: 30% 4%;
+  --pos-e2: 50% 12%;
+  --pos-e3: 50% 12%;
+  --pos-e4: 50% 12%;
+  --pos-e5: 50% 12%;
+  --pos-e6: 50% 12%;
 
   /* ---- HEADER ---- */
   --t-agency:   "Backcountry Ranger Division \00b7 Personnel File";
@@ -41,7 +50,7 @@
   /* ---- VITALS TABLE ---- */
   --t-v1l: "Age";              --t-v1v: "34";
   --t-v2l: "Height";           --t-v2v: "6' 0\"";
-  --t-v3l: "Species";          --t-v3v: "Anthro Panther";
+  --t-v3l: "Species";          --t-v3v: "Panther";
   --t-v4l: "Eyes";             --t-v4v: "Green";
   --t-v5l: "Ident. Marks";     --t-v5v: "Scar, left brow";
   --t-v6l: "Current Post";     --t-v6v: "Backcountry patrol \2014 sole badge";
@@ -225,7 +234,7 @@ a.mg-ac::after{content:"view file \2197";display:block;margin-top:9px;font-famil
 .mg-logs{display:flex;flex-wrap:wrap;gap:16px}
 .mg-log{flex:1 1 240px;max-width:calc(50% - 8px);border:1px solid rgba(0,0,0,.4);background:rgba(255,255,255,.15);padding:11px;transition:transform .25s ease,box-shadow .25s ease}
 .mg-log:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(0,0,0,.35)}
-.mg-limg{position:relative;width:100%;aspect-ratio:var(--ar,3/4);background-size:cover;background-position:center 12%;filter:grayscale(.35) contrast(1.08) sepia(.12);border:1px solid rgba(0,0,0,.45);transition:filter .35s ease}
+.mg-limg{position:relative;width:100%;aspect-ratio:var(--ar,16/10);background-size:cover;background-position:var(--pos,50% 12%);filter:grayscale(.35) contrast(1.08) sepia(.12);border:1px solid rgba(0,0,0,.45);transition:filter .35s ease}
 .mg-log:hover .mg-limg{filter:grayscale(0) contrast(1.02) sepia(0)}
 .mg-lno{position:absolute;top:0;left:0;background:var(--mg-olive2);color:#d2d6c3;font-family:'Black Ops One',cursive;font-size:12px;letter-spacing:1px;padding:3px 9px}
 .mg-lbody{padding:10px 2px 2px}
@@ -236,12 +245,12 @@ a.mg-ac::after{content:"view file \2197";display:block;margin-top:9px;font-famil
 .mg-tag.nsfw{border-color:var(--mg-stamp);color:var(--mg-stamp)}
 .mg-tag.sfw{border-color:#3f6b3a;color:#3f6b3a}
 .mg-tag.secret{border-color:#2f6285;color:#2f6285}
-.mg-log.e1 .mg-limg{background-image:var(--img-e1);--ar:var(--ar-e1)} .mg-log.e1 .mg-lno::after{content:"01"} .mg-log.e1 .mg-lt::after{content:var(--t-e1t)} .mg-log.e1 .mg-ls::after{content:var(--t-e1s)}
-.mg-log.e2 .mg-limg{background-image:var(--img-e2);--ar:var(--ar-e2)} .mg-log.e2 .mg-lno::after{content:"02"} .mg-log.e2 .mg-lt::after{content:var(--t-e2t)} .mg-log.e2 .mg-ls::after{content:var(--t-e2s)}
-.mg-log.e3 .mg-limg{background-image:var(--img-e3);--ar:var(--ar-e3)} .mg-log.e3 .mg-lno::after{content:"03"} .mg-log.e3 .mg-lt::after{content:var(--t-e3t)} .mg-log.e3 .mg-ls::after{content:var(--t-e3s)}
-.mg-log.e4 .mg-limg{background-image:var(--img-e4);--ar:var(--ar-e4)} .mg-log.e4 .mg-lno::after{content:"04"} .mg-log.e4 .mg-lt::after{content:var(--t-e4t)} .mg-log.e4 .mg-ls::after{content:var(--t-e4s)}
-.mg-log.e5 .mg-limg{background-image:var(--img-e5);--ar:var(--ar-e5)} .mg-log.e5 .mg-lno::after{content:"05"} .mg-log.e5 .mg-lt::after{content:var(--t-e5t)} .mg-log.e5 .mg-ls::after{content:var(--t-e5s)}
-.mg-log.e6 .mg-limg{background-image:var(--img-e6);--ar:var(--ar-e6)} .mg-log.e6 .mg-lno::after{content:"06"} .mg-log.e6 .mg-lt::after{content:var(--t-e6t)} .mg-log.e6 .mg-ls::after{content:var(--t-e6s)}
+.mg-log.e1 .mg-limg{background-image:var(--img-e1);--ar:var(--ar-e1);--pos:var(--pos-e1)} .mg-log.e1 .mg-lno::after{content:"01"} .mg-log.e1 .mg-lt::after{content:var(--t-e1t)} .mg-log.e1 .mg-ls::after{content:var(--t-e1s)}
+.mg-log.e2 .mg-limg{background-image:var(--img-e2);--ar:var(--ar-e2);--pos:var(--pos-e2)} .mg-log.e2 .mg-lno::after{content:"02"} .mg-log.e2 .mg-lt::after{content:var(--t-e2t)} .mg-log.e2 .mg-ls::after{content:var(--t-e2s)}
+.mg-log.e3 .mg-limg{background-image:var(--img-e3);--ar:var(--ar-e3);--pos:var(--pos-e3)} .mg-log.e3 .mg-lno::after{content:"03"} .mg-log.e3 .mg-lt::after{content:var(--t-e3t)} .mg-log.e3 .mg-ls::after{content:var(--t-e3s)}
+.mg-log.e4 .mg-limg{background-image:var(--img-e4);--ar:var(--ar-e4);--pos:var(--pos-e4)} .mg-log.e4 .mg-lno::after{content:"04"} .mg-log.e4 .mg-lt::after{content:var(--t-e4t)} .mg-log.e4 .mg-ls::after{content:var(--t-e4s)}
+.mg-log.e5 .mg-limg{background-image:var(--img-e5);--ar:var(--ar-e5);--pos:var(--pos-e5)} .mg-log.e5 .mg-lno::after{content:"05"} .mg-log.e5 .mg-lt::after{content:var(--t-e5t)} .mg-log.e5 .mg-ls::after{content:var(--t-e5s)}
+.mg-log.e6 .mg-limg{background-image:var(--img-e6);--ar:var(--ar-e6);--pos:var(--pos-e6)} .mg-log.e6 .mg-lno::after{content:"06"} .mg-log.e6 .mg-lt::after{content:var(--t-e6t)} .mg-log.e6 .mg-ls::after{content:var(--t-e6s)}
 
 /* ---------- handler's notes ---------- */
 .mg-notes{border:1px solid var(--mg-line);border-top:4px solid var(--mg-stamp);background:rgba(255,255,255,.14);padding:16px 18px;white-space:pre-line;font-family:'Special Elite',monospace;font-size:13.5px;line-height:1.78;color:var(--mg-ink)}
